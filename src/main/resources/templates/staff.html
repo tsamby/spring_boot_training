@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xlmns:th="http://www.thymeleaf.org" xmlns:xlmns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Embassy Legacy AirBnB Staff</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Employee Number</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+    </tr>
+    <tr>
+    <tr th:each="staff:${staff}">
+        <td th:text="${staff.employeeId}">Employee Number</td>
+        <td th:text="${staff.firstName}">First Name</td>
+        <td th:text="${staff.lastName}">Last Name</td>
+        <td th:text="${staff.position.toString()}">Position</td>
+    </tr>
+</table>
+
+</body>
+</html>
